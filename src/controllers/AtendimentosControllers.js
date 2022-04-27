@@ -12,6 +12,22 @@ class AtendimentosController {
         });
       };
 
+      static getAtendimentosById = (req, res) => {
+        const id = req.params.id
+        atendimentos.findById(id,(e, atendimentos ) =>  {
+           if(e) {
+            res.status(500).send({ message: `${e.message} - Fail search` });
+          } else {
+            res.status(200).json(atendimentos);
+          }
+           
+        });
+          
+        
+      };
+
+
+
       static postAtendimentos = (req, res) => {
         const cadastroAtendimento = new atendimentos(req.body)
       cadastroAtendimento.save(cadastroAtendimento, (e) => {

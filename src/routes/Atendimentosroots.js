@@ -5,6 +5,7 @@ const router = Router()
 
 router
 .get('/atendimentos', AtendimentosController.getAtendimentos)
+.get('/atendimentosPorId/:id', AtendimentosController.getAtendimentosById)
 .post('/atendimentos', AtendimentosController.postAtendimentos)
 .put('/atendimentos/:id', AtendimentosController.updateAtendimentos)
 .delete('/atendimentos/:id', AtendimentosController.deleteAtendimentos)
