@@ -5,9 +5,9 @@ const router = Router()
 
 router
 .get('/atendimentos', AtendimentosController.getAtendimentos)
-.get('/atendimentosPorId/:id', AtendimentosController.getAtendimentosById)
-.post('/atendimentos', AtendimentosController.postAtendimentos)
-.put('/atendimentos/:id', AtendimentosController.updateAtendimentos)
-.delete('/atendimentos/:id', AtendimentosController.deleteAtendimentos)
+router.get('/atendimentosPorId/:id', AtendimentosController.getAtendimentosById)
+router.post('/atendimentos', AtendimentosController.postAtendimentos)
+router.put('/atendimentos/:id', AtendimentosController.updateAtendimentos)
+router.delete('/atendimentos/:id', AtendimentosController.deleteAtendimentos)
 
 export default router
